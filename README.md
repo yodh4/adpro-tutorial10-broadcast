@@ -8,3 +8,13 @@ Ketika kita mengubah port pada aplikasi client maka outputnya akan seperti ini
 ![img](2.png)
 Untuk memperbaiki error tersebut kita harus mengganti juga port pada aplikasi server menjadi `8080` agar aplikasi dapat berjalan lancar seperti berikut
 ![img](3.png)
+
+<b>2.3 Small Changes</b>
+![img](4.png)
+Untuk menambahkan informasi mengenai setiap client yang mengirim pesan kita perlu mengubah bagian kode berikut pada `server.rs`
+```
+if let Some(text) = msg.as_text() {
+                            println!("From client {addr:?} {text:?}");
+                            bcast_tx.send(format!("{addr} : {text}"))?;
+                        }
+```
