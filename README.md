@@ -1,0 +1,3 @@
+<b>2.1 Original Code</b>
+![img](1.png)
+Untuk menjalankan program ini pengguna harus memasukkan command `cargo run --bin server` dan `cargo run --bin client`. Setelah program berjalan pengguna dapat menginput text pada aplikasi client dan selanjutnya server akan mem-broadcast text tersebut ke client lainnya yang terhubung, untuk melihat pesan tersebut dibroadcast ke client lain pengguna dapat me-run beberapa aplikasi client.
